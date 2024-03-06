@@ -59,6 +59,14 @@ st.subheader('What else?')
 
 n_fragments = st.slider('How many DNA fragments do you want to assembly?', 2, 6, 3)
 
+c1, c2, c3, c4 = st.columns(4)
+
+for i in range(n_fragments):
+
+    c1.text_input('Fragment name')
+    c2.number_input('Fragment lenght (bp)')
+    c3.number_input('Fragment concentration (ng/µL)')
+
 #st.text_input('Give me some names for the fragments')
 
 if n_fragments < 4:
