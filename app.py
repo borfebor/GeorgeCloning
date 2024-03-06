@@ -61,7 +61,7 @@ n_fragments = st.slider('How many DNA fragments do you want to assembly?', 2, 6,
 
 c1, c2, c3= st.columns(3)
 
-#item = list()
+item = list()
  
 for c in range(n_fragments):
     name = f'fragment {c+1}'
