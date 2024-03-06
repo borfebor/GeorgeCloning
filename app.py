@@ -52,7 +52,7 @@ def dilute_to_10(m, c):
     """
     return m*20/c
 
-item = [(250, 5000),(400, 200), (200, 10500)]
+#item = [(250, 5000),(400, 200), (200, 10500)]
 
 st.header('George Cloning')
 st.subheader('What else?')
@@ -62,6 +62,7 @@ n_fragments = st.slider('How many DNA fragments do you want to assembly?', 2, 6,
 c1, c2, c3= st.columns(3)
 
 item = list()
+names = list()
  
 for c in range(n_fragments):
     name = f'fragment {c+1}'
@@ -70,6 +71,7 @@ for c in range(n_fragments):
     m_temp = c3.number_input('Fragment concentration (ng/µL)', 0, 4000, 50 + c)
 
     item.append((m_temp, bp_temp))
+    names.append(name_temp)
 #st.text_input('Give me some names for the fragments')
 
 if n_fragments < 4:
@@ -89,7 +91,7 @@ st.write(f'Vector fragment is the fragment #{vector_index+1} ')
 
 for n, f in enumerate(item):
     
-    name = f'Fragment {n+1}'
+    name = names[n]
     
     c, bp = f[0], f[1]
     
