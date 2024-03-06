@@ -63,11 +63,11 @@ c1, c2, c3= st.columns(3)
 
 #item = list()
  
-for c in range(n_fragments):
-    name = f'fragment {c+1}'
-    name_temp = c1.text_input('Fragment name', name)
-    bp_temp = c2.number_input('Fragment lenght (bp)', 0.0, 30000.0, 100 + c)
-    m_temp = c3.number_input('Fragment concentration (ng/µL)', 0.0, 4000.0, 50 + c)
+#for c in range(n_fragments):
+#    name = f'fragment {c+1}'
+#    name_temp = c1.text_input('Fragment name', name)
+#    bp_temp = c2.number_input('Fragment lenght (bp)', 0.0, 30000.0, 100 + c)
+#    m_temp = c3.number_input('Fragment concentration (ng/µL)', 0.0, 4000.0, 50 + c)
 
 #    item.append((m_temp, bp_temp))
 #st.text_input('Give me some names for the fragments')
