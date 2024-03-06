@@ -7,6 +7,7 @@ Created on Wed Mar  6 12:07:32 2024
 """
 
 import streamlit as st
+import numpy as np
 
 def pmol_from_mass(w, bp):
     """
@@ -119,9 +120,9 @@ for n, f in enumerate(item):
         c = m
         st.markdown(f"""Prepare a dilution of Fragment {name} in another eppi:
         {water} µL of water
-        {v} µL of {name} PCR DNA""")
+        {np.round(v,2)} µL of {name} PCR DNA""")
         µl = dna_volume(c, m)
         name = f'Diluted {name}'
     
-    st.write(f'Fragment {n+1}: add {m} ng ({pmol} pmol) = {µl} µl of {name}')
+    st.write(f'Add {m} ng ({pmol} pmol) = {µl} µl of {name}')
 #def available_dna(c, )
