@@ -10,8 +10,6 @@ import streamlit as st
 import numpy as np
 from PIL import Image
 
-image = Image.open('gc.png')
-
 def pmol_from_mass(w, bp):
     """
     input
@@ -58,6 +56,7 @@ def dilute_to_10(m, c):
 
 #item = [(250, 5000),(400, 200), (200, 10500)]
 
+image = Image.open('gc.png')
 st.image(image)
 
 n_fragments = st.slider('How many DNA fragments do you want to assembly?', 2, 6, 3)
