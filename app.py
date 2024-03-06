@@ -57,7 +57,7 @@ def dilute_to_10(m, c):
 st.set_page_config(
      page_title="George Cloning",
      #page_icon=tab_logo,
-     layout="wide",
+     #layout="wide",
      initial_sidebar_state="expanded"
 )
 
