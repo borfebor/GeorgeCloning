@@ -93,7 +93,7 @@ for n, f in enumerate(item):
     
     name = names[n]
     
-    st.supheader(f'Preparation of {name}')
+    st.subheader(f'Preparation of {name}')
     
     c, bp = f[0], f[1]
     
