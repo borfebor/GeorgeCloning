@@ -117,7 +117,7 @@ for n, f in enumerate(item):
         c = m
         st.markdown(f"""Prepare a dilution of Fragment {name} in another eppi:
         {water} µL of water
-        {v} µL of Fragment {n+1} PCR DNA""")
+        {v} µL of {name} PCR DNA""")
         µl = dna_volume(c, m)
         name = f'Diluted {name}'
     
