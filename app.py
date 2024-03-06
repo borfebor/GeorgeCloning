@@ -54,11 +54,11 @@ def dilute_to_10(m, c):
 
 item = [(250, 5000),(400, 200), (200, 10500)]
 
-n_fragments = st.number_input('How many DNA fragments do you want to assembly?')
+n_fragments = st.slider('How many DNA fragments do you want to assembly?', 2, 6, 3)
 
-st.text_input()
+st.text_input('Give me some names for the fragments')
 
-if n_fragments < 3:
+if n_fragments < 4:
     min_pmol, max_pmol = 0.03, 0.2
 else:
     min_pmol, max_pmol = 0.1, 0.2
