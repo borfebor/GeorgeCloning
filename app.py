@@ -59,18 +59,18 @@ st.subheader('What else?')
 
 n_fragments = st.slider('How many DNA fragments do you want to assembly?', 2, 6, 3)
 
-c1, c2, c3, c4 = st.columns(4)
+c1, c2, c3= st.columns(3)
 
 
-prep = list()
+item = list()
  
 for c in range(n_fragments):
-    name = f'fragment {c}'
+    name = f'fragment {c+1}'
     name_1 = c1.text_input('Fragment name', name)
-    bp_1 = c2.number_input('Fragment lenght (bp)', 0.0, 1000.0, 8.5 + c)
-    m_2 = c3.number_input('Fragment concentration (ng/µL)', 0.0, 100.0, 45.0 + c)
+    bp_temp = c2.number_input('Fragment lenght (bp)', 0.0, 30000.0, 100 + c*10)
+    m_temp = c3.number_input('Fragment concentration (ng/µL)', 0.0, 4000.0, 50 + c)
 
-    item.append((m_2, bp_1))
+    item.append((m_temp, bp_temp))
 
 #st.text_input('Give me some names for the fragments')
 
