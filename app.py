@@ -54,7 +54,12 @@ def dilute_to_10(m, c):
     """
     return m*20/c
 
-#item = [(250, 5000),(400, 200), (200, 10500)]
+st.set_page_config(
+     page_title="George Cloning",
+     #page_icon=tab_logo,
+     layout="wide",
+     initial_sidebar_state="expanded"
+)
 
 image = Image.open('gc.png')
 st.image(image)
