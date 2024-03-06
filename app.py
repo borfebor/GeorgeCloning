@@ -66,7 +66,7 @@ item = list()
  
 for c in range(n_fragments):
     name = f'fragment {c+1}'
-    name_1 = c1.text_input('Fragment name', name)
+    name_temp = c1.text_input('Fragment name', name)
     bp_temp = c2.number_input('Fragment lenght (bp)', 0.0, 30000.0, 100 + c)
     m_temp = c3.number_input('Fragment concentration (ng/µL)', 0.0, 4000.0, 50 + c)
 
@@ -74,10 +74,10 @@ for c in range(n_fragments):
 
 #st.text_input('Give me some names for the fragments')
 
-if n_fragments < 4:
-    min_pmol, max_pmol = 0.03, 0.2
-else:
-    min_pmol, max_pmol = 0.1, 0.2
+#if n_fragments < 4:
+#    min_pmol, max_pmol = 0.03, 0.2
+#else:
+#    min_pmol, max_pmol = 0.1, 0.2
     
 min_vol, max_vol = 0.5, 2.5
 
