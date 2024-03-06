@@ -61,7 +61,6 @@ n_fragments = st.slider('How many DNA fragments do you want to assembly?', 2, 6,
 
 c1, c2, c3= st.columns(3)
 
-
 item = list()
  
 for c in range(n_fragments):
@@ -76,9 +75,10 @@ st.stop()
 #st.text_input('Give me some names for the fragments')
 
 if n_fragments < 4:
-   min_pmol, max_pmol = 0.03, 0.2
+   min_pmol = 0.03
+   max_pmol = 0.2
 else:
-    min_pmol, max_pmol = 0.1, 0.2
+   min_pmol, max_pmol = 0.1, 0.2
     
 min_vol, max_vol = 0.5, 2.5
 
