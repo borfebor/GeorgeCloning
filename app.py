@@ -72,12 +72,13 @@ for c in range(n_fragments):
 
     item.append((m_temp, bp_temp))
 
+st.stop()
 #st.text_input('Give me some names for the fragments')
 
-#if n_fragments < 4:
-#    min_pmol, max_pmol = 0.03, 0.2
-#else:
-#    min_pmol, max_pmol = 0.1, 0.2
+if n_fragments < 4:
+   min_pmol, max_pmol = 0.03, 0.2
+else:
+    min_pmol, max_pmol = 0.1, 0.2
     
 min_vol, max_vol = 0.5, 2.5
 
