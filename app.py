@@ -6,10 +6,6 @@ Created on Wed Mar  6 12:07:32 2024
 @author: borfebor
 """
 
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
 import streamlit as st
 
 def pmol_from_mass(w, bp):
@@ -58,14 +54,18 @@ def dilute_to_10(m, c):
 
 item = [(250, 5000),(400, 200), (200, 10500)]
 
-st.number_input()
+n_fragments = st.number_input('How many DNA fragments do you want to assembly?')
 
 st.text_input()
 
-min_pmol, max_pmol = 0.03, 0.2
+if n_fragments < 3:
+    min_pmol, max_pmol = 0.03, 0.2
+else:
+    min_pmol, max_pmol = 0.1, 0.2
+    
 min_vol, max_vol = 0.5, 2.5
 
-print(f'Assembly with {len(item)} fragments')
+print(f'Assembly with {n_fragments} fragments')
 
 fragments_bp = [i[1] for i in item]
 vector_length = max(fragments_bp)
