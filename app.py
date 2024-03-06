@@ -56,7 +56,7 @@ item = [(250, 5000),(400, 200), (200, 10500)]
 
 n_fragments = st.slider('How many DNA fragments do you want to assembly?', 2, 6, 3)
 
-st.text_input('Give me some names for the fragments')
+#st.text_input('Give me some names for the fragments')
 
 if n_fragments < 4:
     min_pmol, max_pmol = 0.03, 0.2
@@ -65,7 +65,7 @@ else:
     
 min_vol, max_vol = 0.5, 2.5
 
-print(f'Assembly with {n_fragments} fragments')
+st.subheader(f'Assembly with {n_fragments} fragments')
 
 fragments_bp = [i[1] for i in item]
 vector_length = max(fragments_bp)
