@@ -63,9 +63,9 @@ c1, c2, c3, c4 = st.columns(4)
 
 for i in range(n_fragments):
 
-    c1.text_input('Fragment name')
-    c2.number_input('Fragment lenght (bp)')
-    c3.number_input('Fragment concentration (ng/µL)')
+    name_1 = c1.text_input('Fragment name')
+    bp_1 = c2.number_input('Fragment lenght (bp)')
+    m_2 = c3.number_input('Fragment concentration (ng/µL)')
 
 #st.text_input('Give me some names for the fragments')
 
