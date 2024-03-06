@@ -54,6 +54,9 @@ def dilute_to_10(m, c):
 
 item = [(250, 5000),(400, 200), (200, 10500)]
 
+st.header('George Cloning')
+st.subheader('What else?')
+
 n_fragments = st.slider('How many DNA fragments do you want to assembly?', 2, 6, 3)
 
 #st.text_input('Give me some names for the fragments')
@@ -71,7 +74,7 @@ fragments_bp = [i[1] for i in item]
 vector_length = max(fragments_bp)
 vector_index = fragments_bp.index(vector_length)
 
-print(f'Vector fragment is the fragment #{vector_index+1} ')
+st.write(f'Vector fragment is the fragment #{vector_index+1} ')
 
 for n, f in enumerate(item):
     
@@ -92,18 +95,18 @@ for n, f in enumerate(item):
     µl = dna_volume(c, m)
     
     if µl > max_vol:
-        print(f'Diluting {name}')
+        st.write(f'Diluting {name}')
     
     if µl < min_vol:
-        print(c, 'ng/µL, which we need', m, 'ng') 
+        st.write(c, 'ng/µL, which we need', m, 'ng') 
         v = m*100/c
         water = 100 - v
         c = m
-        print(f"""Prepare a dilution of Fragment {n} in another eppi:
+        st.write(f"""Prepare a dilution of Fragment {n} in another eppi:
         {water} µL of water
         {v} µL of Fragment {n+1} PCR DNA""")
         µl = dna_volume(c, m)
         name = f'Diluted {name}'
     
-    print(f'Fragment {n+1}: add {m} ng ({pmol} pmol) = {µl} µl of {name}')
+    st.write(f'Fragment {n+1}: add {m} ng ({pmol} pmol) = {µl} µl of {name}')
 #def available_dna(c, )
